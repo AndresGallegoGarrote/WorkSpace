@@ -1,0 +1,13 @@
+.container{
+    height: 100vh;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns:1fr 3fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr;
+}
+.box{
+    background: salmon;
+    padding: 10px;color: 10px;
+    color: aliceblue;
+    text-align: center;
+}

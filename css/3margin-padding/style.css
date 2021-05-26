@@ -1,0 +1,14 @@
+.margin{
+    background: tomato;
+    margin-top: 50 px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+    margin-right: 500px;
+    /*margin : 50px 100px 200px 500px*/
+}
+
+.padding{
+    background:yellowgreen;
+    padding: 100px 10px 20px 200px;
+    border-radius: 10px
+}

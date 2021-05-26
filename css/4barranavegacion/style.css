@@ -1,0 +1,40 @@
+nav{
+    background: #f1d8f1;
+    padding:10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.nav-enlace{
+    background: #546460;
+    color:#ffffff;
+    padding:10px 30px;
+    text-decoration:none;
+}
+.nav-enlace:hover{
+    background: #fa8072;
+    border:solid 1px greenyellow;
+    color: black;
+}
+
+.nav-boton{
+    background: #546460;
+    color:#ffffff;
+    padding:10px;
+    border: 2px solid #ffffff;
+    display: none; 
+    /* con esto desaparece el boton llamado menus cuando el tamaño es inferior a 600px */
+}
+
+@media (max-width:600px){
+    nav{
+        background: yellow;
+        flex-direction: column;
+    }
+    nav-enlace{
+        margin:10px 0;
+    }
+    .nav-boton{
+        display:inline-block;
+    }
+}

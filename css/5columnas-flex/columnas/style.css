@@ -1,0 +1,14 @@
+nav{
+    background:yellowgreen ;
+    padding:20px
+}
+.padre{
+    display: flex;
+}
+.columna{
+    background:blueviolet;
+    color: white;
+    padding:20px;
+    width:20 px;
+    margin:10 px;
+}
