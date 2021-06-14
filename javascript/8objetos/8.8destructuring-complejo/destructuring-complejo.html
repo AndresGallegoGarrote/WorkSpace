@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //añado más propiedades al objeto
+let movil ={
+    nombre: "Samsung",
+    precio: 200,
+    fabricado: {
+        pais: "China",
+        direccion: {
+            ciudad: "Bejing",
+            calle: "nueva, 24"
+        }
+    }
+} 
+
+//accediendo a las propiedads más internas del objeto: 
+//para acceder a la propiedad debo seguir la misma estructura que tiene el objeto. Por ej si quiero saber el valor de  fabricado y una vez dentro quiero acceder al país
+let {fabricado: {pais}} = movil;
+console.log(pais);
+
+let {fabricado: {direccion: {ciudad}}} = movil
+console.log(ciudad);
+
+    </script>
+</body>
+</html>

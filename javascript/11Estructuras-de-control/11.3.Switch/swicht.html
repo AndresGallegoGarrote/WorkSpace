@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+   <h1>Switch: evalua multiples condiciones</h1>
+    <script>
+        let formaPago = prompt("elige forma de pago: metalico, credito, paypal o debito")
+        switch(formaPago){
+            case 'metalico', 'efectivo' :
+            pagar();
+            break;
+            case 'credito':
+            console.log(`has elegido pagar con ${formaPago}`);
+            pagar();
+            break;
+            case 'paypal':
+                pagar();
+            console.log(`has elegido pagar con ${formaPago}`);
+            break;
+            case 'debito':
+            console.log(`has elegido pagar con ${formaPago}`);
+            default:console.log('debes elegir una forma de pago compatible');
+        }
+        function pagar(){console.log('pagando...')}
+    </script>
+</body>
+</html>

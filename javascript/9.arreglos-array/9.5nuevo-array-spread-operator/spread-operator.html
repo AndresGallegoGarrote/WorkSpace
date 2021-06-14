@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+         const articulos = []
+        const articulo1={
+            nombre: "jabon",
+            precio: 2.50
+        }
+        articulos.unshift(articulo1);
+        
+        const articulo2={
+            nombre: "crema dental colgate",
+            precio: 2
+        }
+        
+        const articulo3={
+            nombre: "champu pantene",
+            precio: 10
+        }
+        let total;
+        total = [...articulos, articulo1, articulo2];
+        total = [articulo3,...total];//l producto se pondra en la posicion 0
+        console.table(total)
+    </script>
+</body>
+</html>

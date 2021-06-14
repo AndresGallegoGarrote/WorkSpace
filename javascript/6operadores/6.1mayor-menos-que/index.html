@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> Comparadores mayor que, menor que, igual que, etc<h1>
+    <script>
+        const numero1 = 50
+        const numero2 = "50"
+        const numero3 = 70
+        console.log(numero1 > numero3); // comparador 'Mayor que' Resultado : False
+        console.log(numero3 > numero1);// true
+        
+        console.log(numero1<numero3);// comparador "menor que" Resultado:true
+        console.log(numero3 < numero1);//False
+        
+        console.log(numero1 == numero2);// comapracion abstracta -> True
+        console.log(numero1 === numero2);//comparacion estricta  -> False
+
+        console.log(numero1 === parseInt(numero2))// al haber 'parseado' el numero2 de "50" a 50la igualdad estricta se cumple por ser el mismo tipo de dato, number
+
+        const password = "admin";
+        const compruebaTuPassword = "Admin";
+        console.log(password != compruebaTuPassword)// ¿son distintos? True
+        
+        console.log(numero1 !== numero2)// True porque no son el mismo tipo de dato. comparador estricto al poner !==
+
+        console.log(numero1 != numero2)//no es estricto y por eso da false (los considera iguales)
+
+    </script>
+</body>
+</html>

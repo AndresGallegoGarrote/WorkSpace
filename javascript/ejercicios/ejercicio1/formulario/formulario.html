@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Html Css Js</title>
+<style>
+body {
+    background: #00bf8f; 
+background: -webkit-linear-gradient(to right, #001510, #00bf8f);  
+background: linear-gradient(to right, #001510, #00bf8f); 
+color:aliceblue
+}
+div{
+    margin: 15%;
+    padding: 13%;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+<div>   
+    <h1>mi primer formulario conJavascript</h1>
+    <form>
+        <label>usuario</label>
+        <input type="text" name = "texto"><br><br>
+        <label>Pass</label>
+        <input type="text" name = "texto"><br><br>
+        <input type="button" name="enviar" value="Enviar" Onclick="enviarAlerta();">
+    </form>
+</div>    
+    <script>
+    enviarAlerta = () => { //funcion en forma de flecha (arrow Function)
+        let dato = document.getElementsByName("texto")[0].value;
+        alert(dato);
+    }
+    </script>
+</body>
+</html>

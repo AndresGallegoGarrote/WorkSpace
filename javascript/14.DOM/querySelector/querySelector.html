@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+<h1>QuerySelector</h1>
+    <div class="principal">
+        <p class="historia uno"></p>
+        <p class="historia dos"></p>
+        <p class="historia tres"></p>
+        <p class="historia cuatro"></p>
+    </div>
+    <div id="nuevo"></div>
+    
+    <div class="padre">padre
+        <div class="hijo"></div>
+    </div>
+    <script>
+        let parrafo = document.querySelector('p');
+        console.log(parrafo)
+        const parrafo1=document.querySelector('.historia'); 
+        //forzamos una llamada por clase con querySelecetor
+        console.log(parrafo1)
+
+        //para id:
+        let nuevo =document.querySelector('#nuevo')
+        console.log(nuevo);
+
+        let contenedor=document.querySelector('.padre .hijo')
+        console.log(contenedor)
+
+        let parrafo2=document.querySelector('.principal .dos');
+        console.log(parrafo2)
+
+    </script>
+</body>
+</html>

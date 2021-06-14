@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>QuerySelector</h1>
+    <p></p>
+    <div class="principal">
+        <p class="historia uno"></p>
+        <p class="historia dos"></p>
+        <p class="historia tres"></p>
+        <p class="historia cuatro"></p>
+    </div>
+<script>
+    let texto = "hola"
+    let parrafo1 = document.querySelectorAll('.historia')
+    console.log(parrafo1)
+   
+   let parrafo=document.querySelectorAll('p');
+   console.log(parrafo)
+   document.querySelector('p').innerHTML=`${texto}`
+</script>
+</body>
+</html>

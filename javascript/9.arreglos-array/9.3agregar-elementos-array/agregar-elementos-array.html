@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar Elementos Array</h1>
+    <script>
+        const numeros = ["uno", "dos", "tres", "cuatro", "cinco"];
+        console.table(numeros);
+        numeros[5]= "seis";
+        console.table(numeros);
+        numeros[6]= "siete";
+        console.table(numeros);
+        numeros.push("ocho"); //Para Agregar al principio y no a final se usa el metodo "unshift()"
+        numeros.unshift("cero");
+        console.table(numeros);
+   </script>
+</body>
+</html>

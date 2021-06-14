@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Foreach & Map => function</h1>
+    <script>
+        let  alumnos = [
+            {nombre: "laura" , edad: 12},
+            {nombre: "Camila" , edad: 19},
+            {nombre: "Violeta" , edad: 23},
+            {nombre: "Gabi" , edad: 13},
+            {nombre: "Miguel" , edad: 15},
+            {nombre: "Juan" , edad: 18},
+        ]
+        console.table(alumnos)
+        let alumnosEdad = alumnos.map(persona => `${persona.edad}`);
+        // let alumnosEdad = alumnos.map(persona => (persona.edad))
+        
+        // let alumnosEdad1 = alumnos.map(function(persona)){
+        //     console.log(`${persona.edad}`) //da error undefined. ojear
+        // }
+        
+        // console.log(alumnosEdad);
+
+        //FOR EACH\\
+
+        const alumnosNobre = alumnos.forEach(persona =>{
+            console.table(`${persona.nombre}`);
+        })
+
+
+
+
+    
+    </script>
+</body>
+</html>

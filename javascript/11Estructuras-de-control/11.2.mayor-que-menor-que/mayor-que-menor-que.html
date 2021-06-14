@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+p{
+    font-size: 50px;
+}      
+</style>
+</head>
+<body>
+    <h1>"Mayor que Menor que"</h1>
+    <p></p>
+    <button onclick="clicar()">Intentelo</button>
+    <script>
+        let saldo = 1600;
+        let gastos = 1400;
+       
+        if(saldo>=gastos){
+        console.log("puedes pagar")
+        }else{
+            console.log("no puedes pagar")
+        }
+        function clicar(){
+            let hora = prompt('dime que hora marca tu reloj')
+                if(hora <= 12){
+                    document.querySelector('p').innerHTML = "buenos dias"
+                }else if(hora <=18 ){
+                    document.querySelector('p').innerHTML =('buenas tardes');
+                }else{
+                    document.querySelector('p').innerHTML =('buenas noches')
+                }
+        }
+
+    </script>
+
+</body>
+</html>

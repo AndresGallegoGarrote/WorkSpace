@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRomesa con setTimeout</h1>
+    <h2 id="parrafo"></h2>
+    <p>wait for 3 seconds...</p>
+    <script>
+        let miPromesa = new Promise((resolve)=>{
+            setTimeout(()=> {
+                resolve("hola, pude cumplir la promesa")
+            },3000)
+        })
+        miPromesa.then((function(valor){
+            document.getElementById("parrafo").innerHTML = valor
+        }))
+    </script>
+</body>
+</html>

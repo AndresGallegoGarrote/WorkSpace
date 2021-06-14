@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue en bucle for(o cualquier bucle o condicional</title>
+</head>
+<body>
+    <h1>Break & Continue en bucle for(o cualquier bucle o condicional</h1>
+    <script>
+        for (let i= 0; i < 20; i++){
+            if (i===10){
+                console.log('he llegado al numero 10')
+                break}
+            console.log(i)
+        }
+        for(let i=0; i<15; i++){
+            if (i===14){
+                console.log(`has llegado al numero ${i}`)
+                continue
+            }
+           console.log(i)
+        }
+        
+        const articulos = [
+            {nombre: 'champu pantene', precio:2, descuento: true},
+            {nombre: 'jabon palmolive', precio:2,},
+            {nombre: 'crema nivea', precio:5},
+            {nombre: 'suavizante pantene', precio:3, descuento: true},
+        ];
+        for( i=0; i< articulos.length; i++){
+            if(articulos[i].descuento){
+                console.log(`el articulo ${articulos[i].nombre}`);
+                continue;
+            }
+        }
+    </script>
+</body>
+</html>

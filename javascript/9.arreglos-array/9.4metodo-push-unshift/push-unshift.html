@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Metodos push & unshift</h1>
+    <script>
+        const articulos = []
+        const articulo1={
+            nombre: "jabon",
+            precio: 2.50
+        }
+        articulos.unshift(articulo1);
+        console.table(articulos)
+        const articulo2={
+            nombre: "crema dental colgate",
+            precio: 2
+        }
+        articulos.push(articulo2);
+        console.table(articulos)
+        const articulo3={
+            nombre: "champu pantene",
+            precio: 10
+        }
+        articulos.unshift(articulo3)
+        console.table(articulos)
+    </script>
+</body>
+</html>

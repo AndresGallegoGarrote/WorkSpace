@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar Y eliminar elementos de un Objeto</h1>
+    <script>
+        const elemento = new Object();
+        elemento.nombre = 'Iphone';
+        elemento.precio = 1000;
+        elemento.stock = true;
+        console.table(elemento)
+
+        elemento.garantia = "2años";
+        
+        console.table(elemento)
+
+        delete elemento.precio;
+        console.table(elemento)
+    </script>
+</body>
+</html>

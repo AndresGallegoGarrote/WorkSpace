@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crear Arrays</h1>
+    <h2></h2>
+    
+    <script>
+        let alumnos = ["natalia","Javi","Paco", "David", "Josue", "Alex", "Jeanpierre", "cristian", "Andrés"]
+        let alumnos2 = new Array("carlos","camilo","violeta", "Gabriela",["isa","Yvone","silvia"]);
+        // alumnos = alumnos1 + alumnos2;
+         alumnos[6] = alumnos     
+        console.table(alumnos);
+
+    </script>
+</body>
+</html>
+
+/*Agrupa elementos y usa la sintaxis de llaves [] y no se usan los corchetes como en los objetos{} */
+
+const alumnos = [ "Natalia", "Javi", "Paco", "David", "Josue", "Alex", "Jeampierre", "Cristian", "Yeison", "Yvonne", "Silvia", "Andrés", "Isa"];
+console.log(alumnos);
+//con los arreglos tendré posición y su valor
+
+
+//otras forma de sintaxis para crear un array es: 
+const alumnos2 = new Array("Carlos", "Camilo", "Violeta", "Gabriela" );
+console.log(alumnos2);
+
+//también pueden tener varios datos dentro de un mismo array 
+const alumnos3 = [ "Natalia", "Javi", "Paco", "David", "Josue", "Alex", "Jeampierre", "Cristian", "Yeison", "Yvonne", "Silvia", "Andrés", "Isa", [25, 16, 26, 22, 28, 24, 24, 24, 25, 22, 21, 20, 19, 23, 27 ]];
+console.table(alumnos3);
+document.querySelector('h2').innerHTML = `el/la alumnx ${alumnos3[5]} tiene: ${alumnos3[13][0]} años`;
+
+
+/*ACCEDER A LOS ARRAYS:***************/
+console.log(alumnos[5]); //accedo a Alex
+console.log(alumnos2[2]);//accedo a violeta
+console.log(alumnos3[13]);//accedo
+console.log(alumnos3[13][3]);//accedo al número 22 que está en la posición del array 3

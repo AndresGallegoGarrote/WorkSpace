@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>Modificar DOM</title>
+<style>
+body{
+    background: linear-gradient(to bottom, #9C9BA0,#34657f, #008780,#509e2f,#abad23, #f7d117,#f2a900);
+}
+nav{
+    background: red;
+    color:white 
+    /* estano cuela */
+}
+li{
+    display: inline;
+    border-right: 1px solid black
+}
+
+a:hover{
+background: #000;
+font-size: 50px;
+opacity: 0.5;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align:center;
+}
+.hero{
+    background-image: url("fondo3.png");
+}
+h1{
+    text-align:center;
+    color:white;
+    font-size: 20px;
+    margin-left:5px;
+    margin-right: 5px;
+}
+img{
+    width:70px;
+    margin-left:20px;
+    margin-bottom: 0.5%;
+    opacity:0.5;}
+#padre{
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align:center;
+    font-size: 1.5rem;
+    background: violet;
+    opacity: 0.5;
+}
+.hijo{
+    color: aquamarine;}
+.tercer{
+    background: pink;
+    font-size:2.5rem;
+    margin-bottom:10px;
+    text-align:center;
+    opacity: 0.5;
+}
+footer{
+    background: #076585;
+    font-size: 1.9rem;
+    padding: 10px;
+    text-align:center;
+    color: red;
+}
+.btn{
+    font-size: 1.5rem;
+    color: green}
+/* responsivo para pantallas de 300 y 720px */
+@media (min-width: 300px) and (max-width: 720px){
+  body, .container{
+    width:100%;
+    /* background-image: url("fondo3.png"); */
+    background-color:#a12d50;
+    opacity:0.7;
+  }
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="hero">
+        <h1><span>Modificar el DOM</span></h1>
+        <img src="./logo_react_sinfondo.png" alt="LogoReact">
+    </div><hr>
+   <div id="padre">
+       <div class="hijo">este es el div1</div>
+       <div class="hijo">este es el div2</div>
+       <div class="hijo">este es el div3</div>
+   </div><hr>
+
+   <div class="tercer">
+    <h2>Soy otro Div</h2>   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+       <p id="segundoParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, neque!</p>
+   </div><hr>
+  <div class="cuarto"></div><hr>
+
+
+  <footer><button class="btn">CLICK</button></footer>
+
+
+    <script>
+        let primero = document.querySelector(".hero")
+        console.log(primero)
+        console.log(primero.innerHTML);//trae HTML
+        console.log(primero.innerText);//texto plano
+        console.log(primero.textContent);//
+
+
+        // ********CAMBIAR EL TITULO**************
+        let cambiarTitulo = "cambio de titulo";
+        document.querySelector('h1').innerHTML = cambiarTitulo;
+
+        //*********CAMBIO LA IMAGEN DEL LOGO DE REACT**************
+        let imagen = document.querySelector("img");
+        imagen.src = 'icon-3.png'
+
+        //**************CAMBIAR EL CSS*****************\\
+        let padre = document.querySelector("#padre .hijo");
+        console.log(padre);
+
+        let padreHijo2 = document.querySelector("#padre .hijo:nth-child(2)");
+        console.log(padreHijo2);
+        //CAMBIAR COLOR, LETRA, ETC..******\\
+
+        let primero2 = document.querySelector(".hero h1");
+        primero2.style.color = 'tomato';
+        primero2.style.fontFamily = 'Arial';
+        primero2.style.textTransform = 'uppercase';
+        
+        //eliminar elementos del DOM\\\\
+        // let eliminar = document.querySelector("#padre .hijo");//entrando a traves del padre.
+        // console.log(eliminar)
+        // eliminar.remove();
+        // eliminar = document.querySelector("#padre .hijo:nth-child(2)");//indicando al segundo hijo.
+        // eliminar.remove();
+        // eliminar = document.querySelector(".hijo");
+        // eliminar.remove()
+        // console.log(eliminar)
+
+        //GENERAR HTML\\\\\\\\\\
+        //Crear elemento para e footer\\\\\
+        let piePagina = document.createElement("li");
+        console.log(piePagina)//creado pero no pintado
+        piePagina.textContent = `${("T:",910000000)}`;
+        //definir en que parte de la pagina insertamos el nuevo elemento creado, appendchild lo pone al final
+        let ubicar1 = document.querySelector("body")//seleccionamos donde lo queremos.
+        ubicar1.appendChild(piePagina);
+
+        //Inseertar elemento antes de otro\\\\\
+
+        piePagina = document.createElement("li");
+        piePagina.textContent = `${("email:andresgallego095@gmail.com")}`
+        console.log(piePagina)
+        let ubicar = document.querySelector("footer");
+        ubicar.insertBefore(piePagina, ubicar.children[2])
+
+        let boton = document.createElement("button")
+        boton.textContent ="me gusta"
+        ubicar = document.querySelector("#segundoParrafo");
+        ubicar.appendChild(boton);
+        boton.style.backgroundColor = "green";
+        boton.style.padding = "10px";
+        console.log(ubicar);
+        
+        let i = 0
+        
+       sumatorio =  boton.onclick = () => {   
+        i++
+        let mostrar = "+ " + (i ) + " me gusta"
+        console.log(mostrar)
+    }
+
+    // let botonDisLike = document.createElement("button")
+    // boton.textContent = "no me gusta"
+    // ubicar = document.querySelector()
+    // ubicar.insertBefore(botonDisLike, ubicar.button)      
+    
+    //crear elemento y su respectivo contenedor\\\\\\\\\
+    let ultimoParrafo = document.createElement("p")
+    ultimoParrafo.textContent = "soy el ultimo parrafo"
+    console.log(ultimoParrafo);
+    //le doy la ubicacion||||
+    ubicar = document.querySelector(".cuarto")
+    ubicar.appendChild(ultimoParrafo)
+    ultimoParrafo.style.backgroundColor='lightblue'
+    ultimoParrafo.style.fontSize="30px"
+
+
+    let ultimaImagen = document.createElement("img");
+    ultimaImagen.src = 'icon-3.png'
+    console.log(ultimaImagen)
+    ubicar = document.querySelector(".cuarto")
+    ubicar.appendChild(ultimaImagen)
+
+    //addEventListener para que esaparezca el footer//
+
+    //1: 
+    let botonBtn = document.querySelector(".btn");
+    let footer = document.querySelector('footer')
+
+    ocultar = () =>{
+        if(botonBtn.style.display="true"){
+            footer.style.display="none"
+        }
+    }
+    botonBtn.addEventListener("click",ocultar)
+
+    //addEventListener con click\\\\\\\\\\\\\\\\\
+    let menu = document.querySelector('nav')
+    menu.addEventListener("click",()=>{
+        console.log('has dado click en el menu')
+    
+    });
+
+    alertaPadre = () =>{
+        alert ("soy el elemnto llamado padre")
+    }
+    
+    document.getElementById("padre").addEventListener("click",alertaPadre)
+
+    
+
+    </script>    //mas eventos para js. 
+</body>
+</html>

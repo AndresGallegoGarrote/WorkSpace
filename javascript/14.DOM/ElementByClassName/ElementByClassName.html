@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>ElementByClassName</h1>
+<p class="nombre">Lorem ipsum dolor sit amet.</p>
+<p class="nombre">Lorem ipsum dolor sit.</p>
+<p class="nombre">Lorem, ipsum dolor.</p>
+<button class="nombre">Nombre</button>
+<body>
+    <script>
+        let parrafo = document.getElementsByClassName('nombre');
+        console.log(parrafo)
+        let parrafoSinClase = document.getElementsByClassName('sinClase');
+        console.log(parrafoSinClase)
+    </script>
+</body>
+</html>

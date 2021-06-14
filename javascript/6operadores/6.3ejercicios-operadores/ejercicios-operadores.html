@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicios con Operadores</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3">usando interpolacion</p>
+    <p id="demo4">sumando un espacio entre cadenas</p>
+    <script>
+        let x = 5;
+        let y = 2
+        let a = 10
+        let nombre = "John";
+        let apellido = "Doe"
+        a += 5;
+        let resultado = x + y
+        document.getElementById("demo").innerHTML = `${resultado}`
+        x++;
+        --y
+        document.getElementById("demo2").innerHTML = a
+        document.getElementById("demo3").innerHTML = `${nombre} ${apellido}`
+        document.getElementById("demo4").innerHTML =nombre + " " + apellido;
+        console.log(x)
+        console.log(y)
+
+    </script>
+</body>
+</html>

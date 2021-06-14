@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros y Variables</title>
+</head>
+<!-- Un parámetro es una propiedad intrínseca de un procedimiento, dado que está incluido en su definición. ... En tanto, los argumentos son más bien los valores actuales asignados a los parámetros variables cuando la función es llamada. Cuando se realiza una llamada a la función, los "valores" pasados se denominan argumentos. -->
+<body>
+   <h1>Parametros y Variables</h1>
+   <script>
+        function acumulado (a,b){
+            console.log(a + b);
+        }
+        acumulado(15, 24); //15 y 23 son argumentos y son "datos reales"
+        acumulado(500, 810)// se pueden cambiar los valores de los argumentos.
+        function registrar(nombre, apellido){
+            console.log(`el alumno es: ${nombre} ${apellido}`);
+        }
+        registrar("Jose", "Serrano")
+        registrar("Jose") //al meterle nuevos valores a los parametros, estoy llamando de nuevo la funcion, por eso el de apellido esta en undefined, en vez de conservar su ultimo valor
+        
+        function almacenar (usuario = '', telefono = ""){
+        console.log(`hola ${usuario}, ${telefono}te has registrado en...`);
+        }
+        almacenar();
+
+        function direccion (dh, sr){
+            console.log(`tu domicilio habitual es: ${dh}, y tu segunda residencia es: ${sr}`)
+        } //dh = direccion habitual, sr = segunda residencia
+        direccion()
+   </script>
+</body>
+</html>

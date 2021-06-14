@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Secuencia de las funciones</h2>
+    <p>En JavaScript las funciones son ejecutadas en la secuencia en que son llamadas</p>
+    <p id="demo"></p>
+    
+    
+    <script>
+        function uno(some){
+            document.getElementById('demo').innerHTML= some;
+            alert(uno)
+        }
+        saludo = () =>{
+            uno("hola");
+            alert(saludo);
+        }        
+       
+       
+        despedida = () =>{ //tambien se pueden llamar mediante alert o console.log |mirar en profundidad|
+            uno("adios")
+            alert("despedida")
+        }
+       
+       
+       
+        saludo()//1.primero imprime la funcion uno, y 2. luego pinta hola en el parrafo
+        despedida()//3.imprime tambien la fncion uno y 4 adios.
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\\
+
+        uno = (algunaCosa) =>{
+            document.getElementById("demo").innerHTML = algunaCosa
+            alert(uno);
+        }
+        verde = () =>{
+            uno("se pintara en el parrafo vacio")
+        }
+        rojo = () =>{
+            uno("Adiós")
+            alert(rojo)
+        }
+        rojo()
+        verde()
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Asincronia</h2>
+    <p id="demo"></p>
+    <script>
+        primera = (calculo) =>{
+            document.getElementById("demo").innerHTML = calculo
+        }
+        calculadora = (num1, num2, callback) =>{ // PORQUE INTERPRETA CALLBACK COMO FUNCION?? es un parametro joder, y la no contesta...
+           suma = num1 + num2
+           callback(suma)
+        }
+        calculadora(5,7 , primera)
+    </script>
+</body>
+</html>

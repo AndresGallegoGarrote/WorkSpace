@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Nav</title>
+    <style>
+      body {
+    background: #00bf8f; 
+    background: -webkit-linear-gradient(to right, #001510, #00bf8f);  
+    background: linear-gradient(to right, #001510, #00bf8f); 
+    color:aliceblue
+    }
+    nav{
+    background: #f1d8f1;
+    padding:10px;
+    display: flex;
+    justify-content:space-around;
+    }
+    .nav-enlace{
+    background: #546460;
+    color:#ffffff;
+    padding:10px 30px;
+    text-decoration:none; 
+    
+    }
+    .nav-enlace:hover{
+    background: #fa8072;
+    border:solid 1px greenyellow;
+    color: black;
+    }
+    .nav-boton:hover{
+        background: #fa8072;
+    border:solid 1px greenyellow;
+    color: black;
+    } 
+    .nav-boton{
+    background: #546460;
+    color:#ffffff;
+    padding:10px;
+     display: inline-block; 
+    
+     /* con esto desaparece el boton llamado menu cuando el tamaño es inferior a 600px, gracias a la invocacion realizada por la media query */
+    }
+    @media (max-width:600px){
+    nav-enlace{
+        background: yellow;
+        flex-direction: column;
+    }
+    nav-enlace{
+    display: none;
+    }
+    
+}
+   
+    </style>
+</head> 
+<body>
+    <nav>
+        <button class='nav-boton' onclick= "menuBoton()";>menú'</button>
+        <a href="#" class="nav-enlace desaparecer">Inicio</a>
+        <a href="#" class="nav-enlace desaparecer">Nosotros</a>
+        <a href="#" class="nav-enlace desaparecer">Servicios</a>
+        <a href="#" class="nav-enlace desaparecer">Contacto</a>
+    </nav>
+    <script>
+        function menuBoton(){
+            console.log("funciona el boton cuando hago click")
+            let ancla =document.getElementsByClassName('nav-enlace');
+            for (let i = 0; i < ancla.length; i++){
+            ancla[i].classList.toggle("desaparecer");
+            }
+        }    
+        
+    </script>
+</body>
+</html>
+<!-- <body>
+    <nav>
+        <button class="nav-boton" onclick="menuBoton()">menú</button>
+        <a href="#" class="nav-enlace desaparecer">Inicio</a>
+        <a href="#" class="nav-enlace desaparecer">Nosotros</a>
+        <a href="#" class="nav-enlace desaparecer">Servicios</a>
+        <a href="#" class="nav-enlace desaparecer">Contacto</a> 
+    </nav>
+    ______________________________
+
+    .nav-enlace{
+        /*display: inline-block; convierte elementos de bloque en elementos de linea en bloque*/
+        background: #546460;
+        color: #ffffff;
+        padding: 10px 30px;
+        text-decoration:none; /*quita la sublinea de la etiqueta <a>*/
+    }
+    
+    .nav-enlace:hover{
+        background:#fa8072;
+    }
+    
+    nav{
+        background: #0a000a;
+        padding: 10px;
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    .nav-boton{
+        background:  #546460;
+        color: #ffffff;
+        padding: 10px;
+        border: 2px solid #fff;
+        display: none; /*Con esto desaparece el boton llamado menú cuando el tamaño es mayor de 600px*/
+    }
+    
+    /*Con esta media query me sirve para el resposive. le estoy indicando que cuando la pantalla tenga un  maximo de 600px  le cambie el color de fondo a rojo*/
+    @media(max-width: 600px){
+        nav{
+            background:salmon;
+            flex-direction: column;
+        }
+        .nav-enlace{
+            margin: 10px 0;
+        }
+        .nav-boton{
+            display: inline-block;
+        }
+    
+        .desaparecer{
+            display: none; /*con esto consigo que todos los botones excepto el que se llama menú desaparezcan cuando es menor de  600*/
+        }
+    }
+__________________________________________________
+
+function menuBoton(){
+    console.log('funciona el boton cuando hago click');//Compruebo que funciona el botón
+    let ancla= document.getElementsByClassName('nav-enlace');
+    for(let i = 0; i < ancla.length; i++){
+        ancla[i].classList.toggle('desaparecer');
+    } 
+} -->

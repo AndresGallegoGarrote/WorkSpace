@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Eliminar Elementos de una Array</h1>
+   <script>
+        let  colores = []
+        let color1= {
+            nombre: "rojo",
+        }
+        const color2={
+            nombre: "verde",
+        }
+        let color3={
+            nombre: "azul",
+            nombre: "cian",
+            saturacion: "50%",
+        }
+        colores.push(color1)
+        colores.push(color2)
+        colores.push(color3)
+        // colores.pop(); // metodo pop elimina la ultima posicion
+        // colores.shift();// elimina la primer posicion (rojo en este caso)
+        // delete color3.nombre //para eliminar segun "clave" en un objeto.
+        
+        console.table(colores)
+        console.log(color3)
+        colores.splice(0, 2);// primer argumento indica donde empieza a borrar, el segundo cuantas posicines ha de borrar.
+        console.table(colores)
+        console.log(color3)
+        
+    </script>
+</body>
+</html>

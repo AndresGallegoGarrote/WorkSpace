@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <h1>For</h1>
+    <script>
+        // for(let i=0; i<10; i++){ // BUCLES INFINITOS NO!!. NO CARGA EL NAVEGADOR \\
+        //     console.log(i); 
+        // }
+        
+        for(let i=0;i<=20;i++){ // BUCLES INFINITOS NO!!. NO CARGA
+            if(i%2==0){ 
+                console.log(`el número ${i} es par`);
+            }else{
+                console.log(`el número ${i} es impar`)
+
+            }
+        }
+        let alumnos = [
+            'javi','paco','cristian','Jeanpierre','Josue','Alex','Yeison','Yvone','Silvia','Abigail', 'Andrés',
+            'Isa','David','Natalia'
+        ];
+        console.log(alumnos.length)
+        
+        for (let i=0; i<alumnos.length;i++){
+            console.log(alumnos[i]);
+        }
+        //recorrer array de objetos
+
+        const alumnos2 = [
+            {nombre: "carla", edad:16},
+            {nombre: "Dani", edad:20},
+            {nombre: "Ali", edad:28},
+            {nombre: "Alejandra", edad:19},
+            {nombre: "Violeta", edad:17},
+
+        ]
+        console.log(alumnos2.length);
+        for (let i=0; i<alumnos2.length; i++){
+            console.log(alumnos2[i].nombre);
+        }
+    </script>
+</body>
+</html>

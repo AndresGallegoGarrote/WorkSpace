@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retorno de valores</title>
+</head>
+<body>
+    <h1>Retorno de valores</h1>
+    <script>
+        let compra = 0
+        function sumar(a, b){
+            return a+b;
+        }
+        const total =sumar(2,3);
+        console.log(total)
+        //aplicar iva 4% a un producto
+       
+        function seleccionar(producto){
+            return compra +=producto
+        }
+        let acumular= seleccionar(500);
+        
+        acumular = seleccionar(500);
+        
+        console.log(acumular);
+        
+        function iva(compra){
+            return compra * 1.04 // ó (1+(4/100)) como resultado es 1.04
+        }
+       
+        let acumuladoImpuesto = iva(compra);
+        console.log (`el valor del total de la compra con IVA es: ${acumuladoImpuesto}`)
+    //-------------------------------------------------\\
+    console.log('________________')    
+    let compra2 = 0;
+        function escoger(articulo){
+            return compra2 +=articulo
+        }
+        let acumulado = escoger(300)
+        acumulado =escoger(700);
+        console.log(acumulado);
+
+        function descuento(compra2){
+            return compra2 * 0.96 //(1-(4/100)) = 0.96
+        }
+        total2 = descuento(compra2);
+        console.log(`el valor es: ${total2}`);
+        //DECLARACION DE RETORNO w3schools. TURORIAL DE RETURN
+    </script>
+</body>
+</html>

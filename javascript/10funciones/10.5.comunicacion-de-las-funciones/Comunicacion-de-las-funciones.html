@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comunicacion de las Funciones</h1>
+    <p></p>
+    <script>
+       start();// es una funcion declarativa y permite llamarla antes de crearla. <--
+       function start(){
+           console.log('1. accediendo al sistema..');
+           acceder('johana');
+            
+       } 
+       function acceder(usuario){
+           console.log(`2. ${usuario} ahora debes acceder`)
+           entrar();
+           let almacen = (usuario)   
+       }
+       function entrar(){
+           console.log(`3. Estas dentro del sistema`);
+       }
+       document.querySelector("p").innerHTML = `accediendo al sistema`
+    
+    </script>
+</body>
+</html>

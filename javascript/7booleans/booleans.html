@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const estudiar = true;
+        console.log(estudiar);console.log(typeof estudiar);
+        const trabajar = false;      
+        console.log(trabajar)
+        console.log(typeof trabajar);
+        const estudiar2 = "true";
+        console.log(typeof estudiar2)
+        //comparando booleans
+        console.log(estudiar === estudiar2);// en este caso concreto da lo mismo poner comparativo estricto o abstracto, dado que no entra a valorar la cadena de true(boleano)y de"true" (string) y por eso el resultado es el mismmo: false
+    //_______________________
+    
+        //If - Else
+
+        const autenticado = false;
+        if(autenticado){
+            console.log('puedes acceder')
+        }
+        else{
+            console.log('debes autentcarte')
+        }
+    
+        const loggin = true;// TERNARIO --> asi se conoce  if = ? ; else = : //solo para un if else, sin mas condicionales.
+        console.log(loggin ? 'puedes entrar' : 'no estas autenticado')
+    </script>
+</body>
+</html>
