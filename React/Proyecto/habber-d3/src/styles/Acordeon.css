@@ -1,0 +1,28 @@
+.acordeon{
+    position:fixed;
+}
+.titulos{
+    padding: 18px;
+    background: linear-gradient(to left, #9C9BA0,#34657f, #008780,#509e2f,#abad23, #f7d117,#f2a900);
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    
+}
+ .acc-oculto{
+    padding:18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.2s ease-out;
+} 
+.soloOculto{
+    visibility:hidden;
+}
+.soloVisible{
+    font-size: 200px;
+}

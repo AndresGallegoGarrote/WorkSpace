@@ -1,0 +1,28 @@
+html{
+    min-height: 100%;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100%;
+    padding-bottom: 5rem;
+    background: linear-gradient(to right, darkgrey, #FF8C00, #40E0D0)
+}
+h1, h2{
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "staatliches", cursive;
+    letter-spacing: 1px;
+}
+.alerta-error{
+    background: red;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "staatliches",curive
+}

@@ -1,0 +1,7 @@
+.footer{
+    /* position:fixed; */
+    padding:15px;
+    background: cyan;
+    color:black;
+    font-size: 30px;
+}

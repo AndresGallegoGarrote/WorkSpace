@@ -1,0 +1,27 @@
+nav{
+    background: black;
+    padding: 10px;
+    display: flex;
+    justify-content:  space-around;
+}
+.nav-enlace{
+    background: white;
+    color: #5258A9;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav-enlace:hover{
+    background: tomato;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+/* ejemplo responsivo */
+@media (max-width:600px){   
+    nav{
+        background: blue;
+        flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 10px 0;
+    }
+}

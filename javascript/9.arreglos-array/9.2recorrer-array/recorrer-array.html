@@ -8,18 +8,18 @@
 </head>
 <body>
     <h1>Recorrer Array</h1>
-    <button></button>
+    <button onclick=prueba()></button>
     
     <script>
       let amigosInstagram = ["natalia","Javi","Paco", "David", "Josue", "Alex", "Jeanpierre", "cristian", "Andrés"]
       console.table(amigosInstagram)
       document.querySelector("button").innerHTML = `${amigosInstagram}`
-      console.log(amigosInstagram.lenght)
-
+      console.log(amigosInstagram)
+      let prueba = () =>{
       for(let i=0; i<amigosInstagram.lenght; i++){
           console.log(amigosInstagram[i])
       }
-    
+      }
     
     </script>
 </body>
